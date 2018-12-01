@@ -1,0 +1,14 @@
+package skel
+
+type User struct {
+	ID      int
+	Name    string
+	Address string
+}
+
+type UserService interface {
+	User(id int) (*User, error)
+	Users() ([]*User, error)
+	CreateUser(u *User) error
+	DeleteUser(id int) error
+}
