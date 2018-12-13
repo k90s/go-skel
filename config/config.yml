@@ -1,0 +1,25 @@
+# 所有系统配置, 注意未定义tag的配置名要全部小写
+
+# 服务器配置
+server:
+  port: 6666
+  debug: true
+
+# PG数据库配置
+postgres:
+  host: localhost
+  port: 5432
+  user: skel
+  password: skel
+  dbname: skel
+  sslmode: disable
+  logmode: true
+  maxopen: 50
+  maxidle: 10
+
+# JWT配置
+jwt:
+  secret: TGbvjJ8NqEoNoanDzzeHjpeRt2SZS0NxHkQVM5cU77GaRvVd4D
+  ttl: 604800 # 7天有效期，单位s
+  whitelist:
+    - ^/auth/

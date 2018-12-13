@@ -1,9 +1,8 @@
-package skel
+package domain
 
 type User struct {
-	ID      int
-	Name    string
-	Address string
+	ID   int
+	Name string
 }
 
 type UserService interface {
